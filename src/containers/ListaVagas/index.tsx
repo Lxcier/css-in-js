@@ -96,11 +96,7 @@ const ListaVagas = () => {
 
   return (
     <>
-      <FormVagas
-        aoPesquisar={function (termo: string): void {
-          throw new Error('Function not implemented.')
-        }}
-      />
+      <FormVagas aoPesquisar={(termo: string) => setFiltro(termo)} />
       <Vagas>
         {vagasFiltradas.map((vag) => (
           <Vaga

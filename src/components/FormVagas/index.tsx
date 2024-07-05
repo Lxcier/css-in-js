@@ -13,11 +13,16 @@ const FormVagas = ({ aoPesquisar }: Props) => {
     aoPesquisar(termo.toLocaleLowerCase())
   }
 
+  console.log(aoEnviarForm)
+
   return (
     <Form onSubmit={aoEnviarForm}>
-      <Campo>
-        <BtnPesquisar type="submit">Pesquisar</BtnPesquisar>
-      </Campo>
+      <Campo
+        placeholder="Front-end, fullstack, node, design"
+        type="search"
+        onChange={(e) => setTermo(e.target.value)}
+      />
+      <BtnPesquisar type="submit">Pesquisar</BtnPesquisar>
     </Form>
   )
 }
